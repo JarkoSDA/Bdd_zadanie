@@ -7,6 +7,6 @@ Feature: Wyszukiwanie fraz
     Then <Tekst> zostaje poprawnie wyszukany
 
     Examples:
-    |fraza | tekst|
+    |fraza | Tekst|
     |bdd   | bdd |
 

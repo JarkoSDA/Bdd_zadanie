@@ -36,9 +36,11 @@ public class WikipediaSteps {
         }
 
         @Then("^(.+) zostaje poprawnie wyszukany$")
-        public void zostaje_poprawnie_wyszukany(String tekst){
-            Assert.assertEquals(tekst, driver.findElement(By.id("firstHeading")).getText());
-        }
+        public void zostaje_poprawnie_wyszukany(String tekst)  {
+        //Assert.assertTrue(driver.findElement(By.id("firstHeading")).getText().toLowerCase().contains(tekst));
+        //Assert.assertTrue(driver.findElement(By.id("firstHeading")).getText().toLowerCase().startsWith(tekst));
+        Assert.assertEquals(tekst+"[edytuj]",driver.findElement(By.id("firstHeading")).getText().toLowerCase());
+    }
 
 
 
